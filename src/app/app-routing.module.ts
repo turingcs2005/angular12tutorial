@@ -5,7 +5,8 @@ import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'help', component: HelpComponent}
+  {path: 'help', component: HelpComponent},
+  { path: 'reactive-form', loadChildren: () => import('./modules/reactive-form/reactive-form.module').then(m => m.ReactiveFormModule) }
 ];
 
 @NgModule({

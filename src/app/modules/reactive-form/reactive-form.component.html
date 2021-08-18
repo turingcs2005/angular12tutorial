@@ -1,0 +1,20 @@
+<div class="mat-h2">Reactive form demo</div>
+
+<form [formGroup]="intakeForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="name" formControlName="name">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Value</mat-label>
+        <input matInput placeholder="value" formControlName="value">
+    </mat-form-field>
+    <br>
+
+    <button mat-raised-button color="accent" type="submit">Submit</button>
+</form>
+
+<br>
+<div *ngIf="obj.name">{{ obj.name }}</div>
