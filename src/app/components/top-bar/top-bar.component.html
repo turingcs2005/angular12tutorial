@@ -1,0 +1,9 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+    <mat-icon [matMenuTriggerFor]="mainMenu">menu</mat-icon>
+    <div>Angular 12 Tutorial</div>
+    <mat-icon [routerLink]="['/help']">help</mat-icon>
+</mat-toolbar>
+
+<mat-menu #mainMenu>
+    <menu mat-menu-item><mat-icon [routerLink]="['/']">home</mat-icon></menu>
+</mat-menu>
