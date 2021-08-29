@@ -1,29 +1,32 @@
-FROM node:14-alpine AS client
+# build front end
+FROM node:14-alpine AS client_build
 
 WORKDIR /app
 
 COPY ./ /app/
 
-RUN npm install --production 
-RUN ng build --configuration production
+RUN npm install
+RUN node_modules/.bin/ng build --configuration production
 
-FROM node:14-alpine AS server
+# build back end
+FROM node:14-alpine AS server_build
 
 WORKDIR /app 
 
-COPY --from=client /app/dist/tutorial /app/dist
-COPY --from=client /app/server /app/
+COPY --from=client_build /app/dist/tutorial /app/dist
+COPY --from=client_build /app/server /app/
 
 RUN npm install --production
 
-# FROM alpine
+# build docker
+FROM alpine
 
-# WORKDIR /app
+WORKDIR /app
 
-# RUN apk add --no-cache nodejs
+RUN apk add --no-cache nodejs
 
-# COPY --from=build0 /app ./
+COPY --from=server_build /app ./
 
-# EXPOSE 3005
+EXPOSE 3006
 
 CMD ["node" , "server"]
