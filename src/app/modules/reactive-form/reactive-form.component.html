@@ -1,20 +1,34 @@
-<div class="mat-h2">Reactive form demo</div>
-<p>Bind form control values to an object via onSubmit() method.</p>
-<form [formGroup]="intakeForm" (ngSubmit)="onSubmit()">
-    <mat-form-field appearance="outline">
-        <mat-label>Name</mat-label>
-        <input matInput placeholder="name" formControlName="name">
-    </mat-form-field>
-    <br>
+<div class="mat-h2">How to reuse a form group</div>
 
-    <mat-form-field appearance="outline">
-        <mat-label>Value</mat-label>
-        <input matInput placeholder="value" formControlName="value">
-    </mat-form-field>
-    <br>
+<ol>
+    <li>Create a form factory service that builds reusable forms.</li>
+    <li>Use the service
+        <ul>
+            <li>in a form array</li>
+            <li>in a reusable component</li>
+        </ul> 
+    </li>
+</ol>
 
-    <button mat-raised-button color="accent" type="submit">Submit</button>
-</form>
+<mat-accordion multi>
 
-<br>
-<div *ngIf="obj.name">{{ obj.name }}</div>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Form array</mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-form-array-demo></app-form-array-demo>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Separate forms sharing a single pattern</mat-panel-title>
+        </mat-expansion-panel-header>
+        <table>
+            <tr>
+                <td><app-skills></app-skills></td>
+                <td><app-hobbies></app-hobbies></td>
+            </tr>
+        </table>
+    </mat-expansion-panel>
+
+</mat-accordion>

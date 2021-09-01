@@ -1,0 +1,20 @@
+<p>Enter your hobby</p>
+<form [formGroup]="hobbyForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" [formControl]="$any(user.controls['name'])">
+    </mat-form-field><br>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Gender</mat-label>
+        <input matInput placeholder="Gender" [formControl]="$any(user.controls['gender'])">
+    </mat-form-field><br>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Hobby</mat-label>
+        <input matInput placeholder="Hobby" [formControl]="$any(hobbyForm.get('hobby'))">
+    </mat-form-field><br>
+
+    <br>
+    <button type="submit" mat-raised-button color="accent">Submit</button>
+</form>
