@@ -7,6 +7,8 @@ import { SharedModule } from '../shared/shared.module';
 import { FormArrayDemoComponent } from './form-array-demo/form-array-demo.component';
 import { SkillsComponent } from './skills/skills.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
+import { FormBasicsComponent } from './form-basics/form-basics.component';
+import { ReuseFormComponent } from './reuse-form/reuse-form.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { HobbiesComponent } from './hobbies/hobbies.component';
     ReactiveFormComponent,
     FormArrayDemoComponent,
     SkillsComponent,
-    HobbiesComponent
+    HobbiesComponent,
+    FormBasicsComponent,
+    ReuseFormComponent
   ],
   imports: [
     CommonModule,

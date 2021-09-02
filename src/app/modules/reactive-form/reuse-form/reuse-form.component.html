@@ -1,0 +1,34 @@
+<div class="mat-h2">How to reuse a form group</div>
+
+<ol>
+    <li>Create a form factory service that builds reusable forms.</li>
+    <li>Use the service
+        <ul>
+            <li>in a form array</li>
+            <li>in a reusable component</li>
+        </ul> 
+    </li>
+</ol>
+
+<mat-accordion multi>
+
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Form array</mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-form-array-demo></app-form-array-demo>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Separate forms sharing a single pattern</mat-panel-title>
+        </mat-expansion-panel-header>
+        <table>
+            <tr>
+                <td><app-skills></app-skills></td>
+                <td><app-hobbies></app-hobbies></td>
+            </tr>
+        </table>
+    </mat-expansion-panel>
+
+</mat-accordion>

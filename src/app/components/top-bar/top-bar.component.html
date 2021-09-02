@@ -6,5 +6,10 @@
 
 <mat-menu #mainMenu>
     <menu mat-menu-item><mat-icon [routerLink]="['/']">home</mat-icon></menu>
-    <menu mat-menu-item [routerLink]="['/reactive-form']">Reactive form</menu>
+    <menu mat-menu-item [matMenuTriggerFor]="formMenu">Reactive form</menu>
+</mat-menu>
+
+<mat-menu #formMenu>
+    <menu mat-menu-item [routerLink]="['/reactive-form/form-basics']">Form basics</menu>
+    <menu mat-menu-item [routerLink]="['/reactive-form/reuse-form']">Reuse form</menu>
 </mat-menu>
