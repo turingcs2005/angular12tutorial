@@ -1,14 +1,7 @@
 <p>Enter your skill</p>
 <form [formGroup]="skillForm" (ngSubmit)="onSubmit()">
-    <mat-form-field appearance="outline">
-        <mat-label>Name</mat-label>
-        <input matInput placeholder="Name" [formControl]="$any(user.controls['name'])">
-    </mat-form-field><br>
-
-    <mat-form-field appearance="outline">
-        <mat-label>Gender</mat-label>
-        <input matInput placeholder="Gender" [formControl]="$any(user.controls['gender'])">
-    </mat-form-field><br>
+    
+    <app-name-gender [inputFormGroup]="$any(user)"></app-name-gender> <br>
 
     <mat-form-field>
         <mat-label>Skill</mat-label>

@@ -14,16 +14,7 @@
     <div *ngFor="let u of userArray.controls; index as i">
 
         <span>User {{ i + 1 }}</span> &nbsp; &nbsp;
-        <mat-form-field appearance="outline">
-            <mat-label>Name</mat-label>
-            <input matInput placeholder="Name" [formControl]="$any(u.get('name'))">
-        </mat-form-field> &nbsp; &nbsp;
-
-        <mat-form-field appearance="outline">
-            <mat-label>Gender</mat-label>
-            <input matInput placeholder="Gender" [formControl]="$any(u.get('gender'))">
-        </mat-form-field> &nbsp; &nbsp;
-
+        <app-name-gender [inputFormGroup]="$any(u)"></app-name-gender> &nbsp; &nbsp;
         <button mat-raised-button color="accent" (click)="removeUser(i)"><mat-icon>delete</mat-icon></button>
 
     </div>

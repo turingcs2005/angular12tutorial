@@ -9,6 +9,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
 import { FormBasicsComponent } from './form-basics/form-basics.component';
 import { ReuseFormComponent } from './reuse-form/reuse-form.component';
+import { NameGenderComponent } from './name-gender/name-gender.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ReuseFormComponent } from './reuse-form/reuse-form.component';
     SkillsComponent,
     HobbiesComponent,
     FormBasicsComponent,
-    ReuseFormComponent
+    ReuseFormComponent,
+    NameGenderComponent
   ],
   imports: [
     CommonModule,
