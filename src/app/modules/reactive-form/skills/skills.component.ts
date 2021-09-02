@@ -30,6 +30,9 @@ export class SkillsComponent implements OnInit {
   onSubmit() {
     console.log('Skill form submitted!');
     console.log(this.skillForm.value);
+    console.log(this.skillForm);
+    console.log(this.skillForm.controls);
+    console.log(this.skillForm.controls['user'] === this.skillForm.get('user'));  // returns true
   }
 
 }
