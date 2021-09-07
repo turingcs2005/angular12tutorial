@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormArray } from '@angular/forms';
+import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
 import { FormFactoryService } from 'src/app/services/form-factory.service';
 
 @Component({
@@ -25,6 +25,10 @@ export class SkillsComponent implements OnInit {
 
   get user() {
     return (<FormGroup>this.skillForm.get('user'));
+  }
+
+  get skill() {
+    return (<FormControl>this.skillForm.get('skill'));
   }
 
   onSubmit() {
