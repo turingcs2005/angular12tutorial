@@ -1,10 +1,11 @@
 <p>Enter your skill</p>
 <form [formGroup]="skillForm" (ngSubmit)="onSubmit()">
-    <app-name-gender [inputFormGroup]="$any(user)"></app-name-gender> <br>
+    <app-name-gender [inputFormGroup]="user"></app-name-gender> <br>
 
     <mat-form-field>
         <mat-label>Skill</mat-label>
         <input matInput placeholder="Skill" [formControl]="skill">
+        <!-- <input matInput placeholder="Skill" [formControl]="$any(skillForm.get('skill'))"> -->
     </mat-form-field><br>
 
     <br>
