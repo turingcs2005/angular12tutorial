@@ -21,15 +21,6 @@
         return this.choices[i];
     }
 
-    // deselect and disable a choice
-    disable(choice: Choice) {
-        choice.disabled = true;
-    }
-
-    enable(choice: Choice) {
-        choice.disabled = false;
-    }
-
     get meal() {
         return this.returnChoice('meal');
     }
