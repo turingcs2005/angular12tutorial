@@ -21,7 +21,7 @@
         return this.choices[i];
     }
 
-    // deselect and disable a choice by name
+    // deselect and disable a choice
     disable(choice: Choice) {
         choice.disabled = true;
     }
