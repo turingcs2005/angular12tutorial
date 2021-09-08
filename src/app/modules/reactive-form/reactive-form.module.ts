@@ -10,6 +10,7 @@ import { HobbiesComponent } from './hobbies/hobbies.component';
 import { FormBasicsComponent } from './form-basics/form-basics.component';
 import { ReuseFormComponent } from './reuse-form/reuse-form.component';
 import { NameGenderComponent } from './name-gender/name-gender.component';
+import { MultiSeletComponent } from './multi-selet/multi-selet.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { NameGenderComponent } from './name-gender/name-gender.component';
     HobbiesComponent,
     FormBasicsComponent,
     ReuseFormComponent,
-    NameGenderComponent
+    NameGenderComponent,
+    MultiSeletComponent
   ],
   imports: [
     CommonModule,

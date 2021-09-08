@@ -1,0 +1,14 @@
+<p>Impose contraints among choices on mat-select multiple choices</p>
+
+<form [formGroup]="intakeForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+        <mat-label>Menu</mat-label>
+        <mat-select formControlName="order" multiple>
+            <mat-option *ngFor="let i of menuChoices.choices" [value]="i.name" [disabled]="i.disabled"
+            (onSelectionChange)="onSelectionChange($event)">
+                {{ i.name }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field> <br>
+    <button mat-raised-button color="accent" type="submit">Submit</button>
+</form>
