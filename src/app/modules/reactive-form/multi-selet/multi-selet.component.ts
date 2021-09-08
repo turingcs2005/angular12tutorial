@@ -24,12 +24,8 @@ export class MultiSeletComponent implements OnInit {
 
   // 💩 Multi-choice mutual-exclusion
   onSelectionChange(v: any) {
-    const name = v.source.value;
-    const selected = v.source._selected;
-    const choice = this.menuChoices.returnChoice(name);
-
-    choice.selected = selected;
-
+    const choice = this.menuChoices.returnChoice(v.source.value);
+    choice.selected = v.source._selected;
     this.menuChoices.click(choice);
   }
 

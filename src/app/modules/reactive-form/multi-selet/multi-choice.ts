@@ -12,7 +12,7 @@
 
   export class MultiChoices {
       constructor(
-        public choices: Choice[]
+        public choices: Choice[] = []
       ){}
 
     //  return a choice by name
@@ -80,11 +80,8 @@
     }
   }
 
-  export const menuChoices = new MultiChoices(
-      [
-          new Choice('meal'),
-          new Choice('burger'),
-          new Choice('fries'),
-          new Choice('T-shirt')
-      ]
-  );
+  export const menuChoices = new MultiChoices();
+  optionList.forEach( x => {
+      menuChoices.choices.push(new Choice(x));
+  });
+  
