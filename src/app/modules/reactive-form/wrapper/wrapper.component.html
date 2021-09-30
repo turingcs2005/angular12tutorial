@@ -1,0 +1,9 @@
+<form [formGroup]="intakeForm" (ngSubmit)="onSubmit()">
+
+    <app-wrapped [control]="$any(intakeForm.controls.firstName)" label="First Name"></app-wrapped> <br>
+    <app-wrapped-date [control]="$any(intakeForm.controls.hireDate)" label="Hire Date"></app-wrapped-date>
+    
+    <br><br>
+    <button mat-raised-button color="accent" type="button" (click)="show()">show</button> &nbsp; &nbsp;
+    <button mat-raised-button color="accent" type="submit">Submit</button>
+</form>

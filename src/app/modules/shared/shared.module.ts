@@ -13,14 +13,26 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { WrappedComponent } from './wrapped/wrapped.component';
+import { WrappedDateComponent } from './wrapped-date/wrapped-date.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+       WrappedComponent,
+       WrappedDateComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatNativeDateModule
   ],
   exports: [
     MatIconModule,
@@ -37,7 +49,10 @@ import {HttpClientModule} from '@angular/common/http';
     
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+
+    WrappedComponent,
+    WrappedDateComponent
   ]
 })
 export class SharedModule { }
