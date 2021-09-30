@@ -17,7 +17,8 @@ export class WrapperComponent implements OnInit {
   ngOnInit(): void {
     this.intakeForm = this.fb.group({
       firstName: [''],
-      hireDate: [null]
+      hireDate: [null],
+      fireDate: [null]
     });
   }
 
