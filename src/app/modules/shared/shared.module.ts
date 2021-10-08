@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { Input, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CurrencyPipe } from '@angular/common';
 
 // material modules
 import {MatIconModule} from '@angular/material/icon';
@@ -17,18 +18,29 @@ import { MatNativeDateModule } from '@angular/material/core';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { InputComponent } from './form-controls/input/input.component';
 
 @NgModule({
   declarations: [
+    InputComponent
   ],
   imports: [
     CommonModule,
+    MatIconModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatDividerModule,
+    MatInputModule,
+    MatMenuModule,
+    MatTooltipModule,
+    MatExpansionModule,
     MatFormFieldModule,
     MatDatepickerModule,
+    
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule,
-    MatNativeDateModule
+    HttpClientModule,
   ],
   exports: [
     MatIconModule,
@@ -47,6 +59,10 @@ import {HttpClientModule} from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
 
-  ]
+    // components 
+    InputComponent
+
+  ],
+  providers: [CurrencyPipe]
 })
 export class SharedModule { }

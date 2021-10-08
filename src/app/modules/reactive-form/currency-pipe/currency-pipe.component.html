@@ -1,0 +1,44 @@
+<div class="mat-h2">Currency Pipe in Reactive Form</div>
+
+<form [formGroup]="intakeForm" (ngSubmit)="onSubmit()">
+
+    <app-input
+        label="Your Name"
+        [control]="$any(intakeForm.controls.name)"
+        icon="person"
+    ></app-input> &nbsp; &nbsp; 
+
+    <app-input
+        label="Your Profession"
+        [control]="$any(intakeForm.controls.profession)"
+    ></app-input> &nbsp; &nbsp; 
+
+    <app-input
+        label="Your Salary"
+        [control]="$any(intakeForm.controls.salary)"
+        fmt="currency"
+    ></app-input> &nbsp; &nbsp; 
+
+    <br>
+
+    <app-input
+        label="Spouse Name"
+        [control]="$any(spouse.controls.name)"
+        icon="person"
+    ></app-input> &nbsp; &nbsp; 
+
+    <app-input
+        label="Spouse Profession"
+        [control]="$any(spouse.controls.profession)"
+    ></app-input> &nbsp; &nbsp; 
+
+    <app-input
+        label="Spouse Salary"
+        [control]="$any(spouse.controls.salary)"
+        fmt="currency"
+    ></app-input> &nbsp; &nbsp; 
+
+    <br><br>
+    <button mat-raised-button color="accent" type="submit">Submit</button>
+
+</form>

@@ -16,4 +16,18 @@ export class FormFactoryService {
       gender: ['']
     });
   }
+
+  getCurrencyForm() {
+    return this.fb.group({
+      name: [''],
+      profession: [''],
+      salary: [0],
+      spouse: this.fb.group({
+        name: [''],
+        profession: [''],
+        salary: [0]
+      })
+    });
+  }
+
 }

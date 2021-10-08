@@ -11,6 +11,7 @@ import { FormBasicsComponent } from './form-basics/form-basics.component';
 import { ReuseFormComponent } from './reuse-form/reuse-form.component';
 import { NameGenderComponent } from './name-gender/name-gender.component';
 import { MultiSeletComponent } from './multi-selet/multi-selet.component';
+import { CurrencyPipeComponent } from './currency-pipe/currency-pipe.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { MultiSeletComponent } from './multi-selet/multi-selet.component';
     ReuseFormComponent,
     NameGenderComponent,
     MultiSeletComponent,
+    CurrencyPipeComponent,
   ],
   imports: [
     CommonModule,
