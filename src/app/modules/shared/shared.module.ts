@@ -17,13 +17,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { WrappedComponent } from './wrapped/wrapped.component';
-import { WrappedDateComponent } from './wrapped-date/wrapped-date.component';
 
 @NgModule({
   declarations: [
-       WrappedComponent,
-       WrappedDateComponent
   ],
   imports: [
     CommonModule,
@@ -51,8 +47,6 @@ import { WrappedDateComponent } from './wrapped-date/wrapped-date.component';
     ReactiveFormsModule,
     HttpClientModule,
 
-    WrappedComponent,
-    WrappedDateComponent
   ]
 })
 export class SharedModule { }

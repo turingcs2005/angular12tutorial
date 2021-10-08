@@ -11,7 +11,6 @@ import { FormBasicsComponent } from './form-basics/form-basics.component';
 import { ReuseFormComponent } from './reuse-form/reuse-form.component';
 import { NameGenderComponent } from './name-gender/name-gender.component';
 import { MultiSeletComponent } from './multi-selet/multi-selet.component';
-import { WrapperComponent } from './wrapper/wrapper.component';
 
 
 @NgModule({
@@ -24,7 +23,6 @@ import { WrapperComponent } from './wrapper/wrapper.component';
     ReuseFormComponent,
     NameGenderComponent,
     MultiSeletComponent,
-    WrapperComponent
   ],
   imports: [
     CommonModule,
