@@ -1,0 +1,42 @@
+<div class="mat-h2">Button</div>
+
+<button mat-fab class="float-button"><mat-icon>favorite</mat-icon></button> &nbsp; &nbsp;
+<button mat-mini-fab><mat-icon>favorite</mat-icon></button>
+
+<br><br>
+
+<div class="container" (mouseenter)="mouseOver()" (mouseleave)="mouseOut()">
+    <mat-toolbar *ngIf="floatMenu" class="float-toolbar transparent">
+        <button mat-mini-fab><mat-icon>face</mat-icon></button> &nbsp;
+        <button mat-mini-fab><mat-icon>lightbulb</mat-icon></button> &nbsp;
+        <button mat-mini-fab><mat-icon>date_range</mat-icon></button> &nbsp;
+        <button mat-mini-fab><mat-icon>build</mat-icon></button> &nbsp;
+        <button mat-mini-fab><mat-icon>favorite</mat-icon></button> &nbsp;
+    </mat-toolbar>
+
+    <mat-toolbar *ngIf="!floatMenu" class="transparent">
+    </mat-toolbar>
+
+    <div class="content">
+        Las Malvinas son Argentinas!
+        Las Malvinas son Argentinas!
+        Las Malvinas son Argentinas!
+        Las Malvinas son Argentinas!
+        Las Malvinas son Argentinas!
+        Las Malvinas son Argentinas!
+        Las Malvinas son Argentinas!
+        Las Malvinas son Argentinas!
+        Las Malvinas son Argentinas!
+        Las Malvinas son Argentinas!
+        Las Malvinas son Argentinas!
+        Las Malvinas son Argentinas!
+        Las Malvinas son Argentinas!
+        Las Malvinas son Argentinas!
+        Las Malvinas son Argentinas!
+        Las Malvinas son Argentinas!
+        Las Malvinas son Argentinas!
+        Las Malvinas son Argentinas!
+        Las Malvinas son Argentinas!
+        Las Malvinas son Argentinas!
+    </div>
+</div>

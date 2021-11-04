@@ -11,3 +11,5 @@ $warn: mat-color($palette-warn);
 
 $primary500: mat-color($palette-primary, 500);
 $accent500: mat-color($palette-accent, 500);
+$accent100-15: mat-color($palette-accent, 100, .15);
+$accent100-5: mat-color($palette-accent, 100, .05);
